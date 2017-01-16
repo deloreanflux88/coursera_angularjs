@@ -13,7 +13,6 @@ function LunchCheckController($scope) {
   $scope.howMuchMessage = '';
 
   $scope.countAndDecide = function () {
-    var count = 0;
     var countList = $scope.itemsList.split(',');
     
     //checkfor and filter out undefined and empty strings
@@ -21,8 +20,7 @@ function LunchCheckController($scope) {
        function(n){ 
          return (n != undefined && n != ""); 
      });
-    count = countList.length;
-    $scope.howMuchMessage = $scope.decide(count); 
+    $scope.howMuchMessage = $scope.decide(countList.length); 
   
   };
   
