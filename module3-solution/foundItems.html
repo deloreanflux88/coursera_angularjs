@@ -1,0 +1,17 @@
+  <div class="row item-box" ng-repeat="item in found">
+    <div class="col-sm-9">
+       <h4>
+       {{item.name}},
+       {{item.short_name}}</h4>
+       <p>{{item.description}}</p>
+    </div>
+    <div class="col-sm-3">
+       <button  class="btn btn-info dont-want-button" 
+                ng-click="onRemove({index: $index});">
+            Don't want this one!
+       </button>
+    </div>
+ </div> 
+
+ <div class="warning" ng-if="!found.length && searchPerformed">Nothing found </div>
+
