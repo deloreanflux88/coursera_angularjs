@@ -2,12 +2,18 @@ body {
   font-family: sans-serif;
 }
 
-.so_clickable {
+.loading-icon {
+  position: absolute;
+  left: 25%;
+  top: 10px;
+}
+
+li[ui-sref] {
   color: #333;
   text-decoration: underline;
 }
 
-.so_clickable:hover {
+li[ui-sref]:hover {
   font-size: 1.1em;
   line-height: 1.1em;
   color: #000;
