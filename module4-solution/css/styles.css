@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+}
+
+.so_clickable {
+  color: #333;
+  text-decoration: underline;
+}
+
+.so_clickable:hover {
+  font-size: 1.1em;
+  line-height: 1.1em;
+  color: #000;
+  cursor: pointer;
+}
