@@ -12,7 +12,8 @@ function MyInfoController(UserService, MenuService, user) {
   $ctrl.invalidmenunumber = true;
 
   $ctrl.register = function(){
-      MenuService.getMenuItem($ctrl.user.favorite.toUpperCase())
+      $ctrl.user.favorite = $ctrl.user.favorite.toUpperCase();
+      MenuService.getMenuItem($ctrl.user.favorite)
       .then(function(response){
           $ctrl.invalidmenunumber = false;
           UserService.setUser($ctrl.user);
