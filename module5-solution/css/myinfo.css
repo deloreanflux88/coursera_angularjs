@@ -1,0 +1,26 @@
+fieldset {
+  display: block;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input {
+  margin-right: auto;
+  margin-bottom: 20px;
+  color: #000;
+}
+.ng-touched.ng-valid {
+  border: 2px green solid;
+}
+
+.ng-touched.ng-invalid {
+  border: 2px red solid;
+}
+
+.myinfo {
+  display: block;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}

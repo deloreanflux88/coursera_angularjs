@@ -21,14 +21,32 @@ function MenuService($http, ApiPath) {
     if (category) {
       config.params = {'category': category};
     }
-
     return $http.get(ApiPath + '/menu_items.json', config).then(function (response) {
       return response.data;
     });
   };
 
+  service.getMenuItem = function (item) {
+     var config = {};
+     if(item){
+         item = item.toUpperCase();
+         return $http.get(ApiPath + '/menu_items/' + item + '.json', config)
+         .then(
+          // success
+           function (response) {
+             return response.data;
+           }
+          /*     ,
+         // error
+           function errorCallback(response){
+                // do stuff with 500/404 etc errors...
+
+          }*/
+        );
+    }
+
+  };
+
 }
-
-
 
 })();
