@@ -38,7 +38,7 @@
       Menu number must be 2 chars long.
     </span>
     <span ng-if="(myInfoForm.favorite.$invalid || ctrl.invalidmenunumber) && myInfoForm.favorite.$touched" >
-      <br >No such menu number exists
+      <br >No such menu number exists <br>
     </span>
     <br>
     <button class="btn btn-primary" ng-click="ctrl.register()"  ng-disabled="myInfoForm.$invalid" >Submit</button>
